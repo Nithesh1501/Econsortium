@@ -1,0 +1,148 @@
+
+html, body {
+	width: 100%;
+	height:100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  body{
+	background: linear-gradient(132deg, #000000, #114799, #d62b00);
+	background-size: 400% 400%;
+	animation: Gradient 15s ease infinite;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding:0;
+	margin:0px;
+  }
+.container .regimg
+{
+	display: block;
+	justify-content: center;
+}
+.container .regimg
+{
+	display: flex;
+	justify-content: center;
+}
+
+
+#para
+{
+background-color : rgb(243, 243, 243);
+color: black;
+}
+
+  .content {
+	background-color:rgba(255,255,255,.8);
+	border-radius:.25em;
+	box-shadow:0 0 .25em rgba(0,0,0,.25);
+	box-sizing:border-box;
+	left:50%;
+	padding:10vmin;
+	position:fixed;
+	text-align:center;
+	top:50%;
+	transform:translate(-50%, -50%);
+  }
+  
+  h1 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  @keyframes slide {
+	0% {
+	  transform:translateX(-25%);
+	}
+	100% {
+	  transform:translateX(25%);
+	}
+  }
+/*Align the title to the center of the page*/
+.table{
+	font-size: 13px;
+	text-align: center;
+	width: 95%;
+	margin: auto;
+	text-align: center;
+}
+
+/*Make alternating colors for the table rows*/
+.table tr:nth-child(odd){
+	background: #B8CAE4
+}
+
+.table tr:nth-child(even){
+	background: #dae5f4
+}
+
+th {
+  background-color: #337ab7;
+  color: white;
+}
+
+.display_table{
+	border-bottom-right-radius: 20px;
+	/*border-bottom-left-radius: 20px;*/
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 20px;
+	box-shadow: 12px 12px 15px #2e6da4;
+}
+.header {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #2e6da4;
+  font-size: 43px;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+  text-shadow: 6px 6px 6px #c9c6c6;
+  display: block;
+  font-weight: bold;
+}
+.para
+{
+	width: 100%;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-align: justify;
+	font-size: 16px;
+}
+.messages{
+	list-style: none;
+	background-color: #2e6da4;
+	color: white;
+	box-shadow: 12px 12px 12px #e61c66;
+	text-align: center;
+}
+.mybutton{
+  width: 100%;
+}
+
+
+@keyframes Gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
+}

@@ -1,0 +1,77 @@
+{% load crispy_forms_tags %}     
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Conosortium Assets</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://chart-studio.plotly.com/create/">Dashboard</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Data Visualisation
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/line_chart">Line Chart</a>
+            <a class="dropdown-item" href="/bar_chart">Bar Chart</a>
+            <a class="dropdown-item" href="/pie_chart">Pie Chart</a>
+            <a class="dropdown-item" href="/radar_chart">Radar Chart</a>
+            <a class="dropdown-item" href="/polar_chart">Polar Area</a>
+            <!--<div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>-->
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/list_item">List Items</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/add_category">Add Category</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/upload">Data Prediction</a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="/add_items">Add Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/list_history">List History</a>
+       </li>-->
+
+
+
+      
+        <ul class="navbar-nav">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="#">Welcome, {{user.username}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+          {% else %}
+    
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
+          {% endif %}
+        </ul>
+      
+
+      </ul>
+      </div>
+
+       <!--<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>-->
+       <!--Navbar-->
+
+  </nav>
+  

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+   <div class="header"> <h1><b>Data Visualisation using Radar Chart</b></h1></div><br>
+
+   <div class="jumbotron" id="para" style="background-image: url('static/img/bg.jpg');">
+  <div id="container" style="width: 100%;" >
+    <canvas id="radar-chart"></canvas>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script  src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+    var config1 = {
+      type: 'radar',
+      data: {
+        datasets: [{
+          data: {{ data|safe }},
+          backgroundColor: [
+            '#2085ec'
+          ],
+          borderColor : [ '#323232'],
+          label: 'Actual Data'
+        }],
+        labels: {{ labels|safe }}
+      },
+      options: {
+        responsive: true
+      }
+    };
+
+    window.onload = function() {
+      var ctx1 = document.getElementById('radar-chart').getContext('2d');
+      window.myPie = new Chart(ctx1, config1);
+    };
+   
+</script>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="header"> <h1><b>Data Visualisation using Bar Graph</b></h1></div><br>
+
+ 
+<div class="jumbotron" id="para" style="background-image: url('static/img/bg.jpg');">
+
+  <div id="container" style="width: 100%;">
+    <canvas id="bar-chart"></canvas>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script  src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+    var config1 = {
+      type: 'bar',
+      data: {
+        datasets: [{
+          data: {{ data|safe }},
+          backgroundColor: [
+          '#2085ec', '#72b4eb', '#0a417a', '#8464a0', '#cea9bc', '#323232', '#4e3b25','#15a8f9','#a6a188','#b1e444','#effbf4','#e68011','#b53a18','#a40c1c','#665a87'
+
+          ],
+          borderColor : [ '#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232','#323232'],
+          label: 'product_name'
+        }],
+        labels: {{ labels|safe }}
+      },
+      options: {
+        responsive: true
+      }
+    };
+
+    window.onload = function() {
+      var ctx1 = document.getElementById('bar-chart').getContext('2d');
+      window.myPie = new Chart(ctx1, config1);
+    };
+   
+</script>
+
+{% endblock %}

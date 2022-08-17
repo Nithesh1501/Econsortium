@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="header"> <h1><b>Data Prediction</b></h1></div><br>
+
+
+<div class="jumbotron" id="para" style="background-image: url('static/img/bg.jpg');">
+  <div class="container" style="width: 100%;">
+      <div class = regimg><img src="data:image/png;base64, {{ image_base64_0 | safe}}" ></div><br>
+      <div class = slope>{{ slope_intercept }}</div><br>
+  </div>
+</div>
+
+   
+
+
+{% endblock %}
